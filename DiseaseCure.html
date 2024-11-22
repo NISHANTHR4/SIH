@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disease Info Page</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <header>
+        <h1>Disease_Information</h1>
+    </header>
+    
+    <main>
+        <section class="prediction-form">
+           
+            <div class="input-container">
+                
+                    <h1>Select a Disease</h1>
+                    
+                    <select id="websiteSelect" onchange="navigateToSelected()">
+                        <option value="" disabled selected>Select a website</option>
+                        <option value="fungal_infection.html">Fungal Infection</option>
+                        <option value="gerd.html">GERD</option>
+                        <option value="chronic_cholestasis.html">Chronic cholestasis</option>
+                        <option value="Peptic ulcer disease.html">Peptic ulcer disease</option>
+                        <option value="AIDS.html">AIDS</option>
+                        <option value="Diabetes.html">Diabetes</option>
+                        <option value="gastroenteritis.html">Gastroenteritis</option>
+                        <option value="bronchia_asthama.html">Bronchial Asthma</option>
+                        <option value="">Hypertension</option>
+                        <option value="">Migraine</option>
+                        <option value="">Cervical spondylosis</option>
+                        <option value="jaundice.html">Jaundice</option>
+                        <option value="malaria.html">Malaria</option>
+                        <option value="Chicken pox.html">Chicken pox</option>
+                        <option value="dengue.html">Dengue</option>
+                        <option value="Typhoid.html">Typhoid</option>
+                        <option value="Hepatitis A.html">Hepatitis A</option>
+                        <option value="Hepatitis B.html">Hepatitis B</option>
+                        <option value="Hepatitis C.html">Hepatitis C</option>
+                        <option value="Hepatitis D.html">Hepatitis D</option>
+                        <option value="Hepatitis E.html">Hepatitis E</option>
+                        <option value="Alcoholic Hepatitis.html">Alcoholic hepatitis</option>
+                        <option value="Tuberculosis.html">Tuberculosis</option>
+                        <option value="Commoncold.html">Common Cold</option>
+                        <option value="Pneumonia.html">Pneumonia</option>
+                        <option value="Dimorphic hemmorhoids(piles).html">Dimorphic hemmorhoids(piles)</option>
+                        <option value="Heartattack.html">Heartattack</option>
+                        <option value="Varicoseveins.html">Varicoseveins</option>
+                        <option value="Hypothyroidism.html">Hypothyroidism</option>
+                        <option value="Hyperthyroidism.html">Hyperthyroidism</option>
+                        <option value="Hypoglycemia.html">Hypoglycemia</option>
+                        <option value="Osteoarthristis.html">Osteoarthristis</option>
+                        <option value="Arthritis.html">Arthritis</option>
+                        <option value="Paroymsal Positional Vertigo.html">(vertigo) Paroymsal  Positional Vertigo</option>
+                        <option value="Acne.html">Acne</option>
+                        <option value="Urinary tract infection.html">Urinary tract infection</option>
+                        <option value="psoriasis.html">Psoriasis</option>
+                        <option value="impetigo.html">Impetigo</option>
+                    </select>
+                
+                    <script>
+                        function navigateToSelected() {
+                            const selectElement = document.getElementById("websiteSelect");
+                            const selectedValue = selectElement.options[selectElement.selectedIndex].value;
+                
+                            // Open the selected website in a new tab
+                            if (selectedValue) {
+                                window.open(selectedValue, '_blank');
+                            }
+                        }
+                    </script>
+                </body>
+                </html>
+                
+            </div>
+          
+        </section>
+
+        <section class="prediction-result">
+            
+            <p id="predictionResult">Waiting for your selection...</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Advanced Predictions Inc.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
